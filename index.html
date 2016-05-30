@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users Manager</title>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/underscore/underscore-min.js"></script>
+    <script src="/bower_components/backbone/backbone-min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+    <div id="main-view" class="container"></div>
+
+    <script type="text/template" id="list-tpl">
+        <div class="list-holder">
+            <h1></h1>
+            <div class="list-group"></div>
+        </div>
+    </script>
+
+    <script type="text/template" id="userListItem-tpl">
+        <a href="/user/{{id}}"><h4 class="list-group-item-heading">{{name}}</h4></a>
+        <p class="list-group-item-text">
+            {{email}}<br />
+            {{address.city}}
+        </p>
+     </script>
+    <script type="text/template" id="userDetail-tpl">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li class="active">{{name}}</li>
+        </ol>
+        <div class="page-header">
+            <h1>{{name}} <small>({{username}})</small></h1>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div>{{email}}</div>
+                <div class="address"></div>
+                <div>{{phone}}</div>
+                <div>{{website}}</div>
+            </div>
+        </div>
+    </script>
+
+    <script src="/js/app.js"></script>
+
+    <!-- Models -->
+    <script src="/js/models/User.js"></script>
+
+    <!-- Collections -->
+    <script src="/js/collections/Users.js"></script>
+
+    <!-- Components Views -->
+    <script src="/js/views/components/ListView.js"></script>
+    <script src="/js/views/components/PaginationView.js"></script>
+    <script src="/js/views/components/ListWithPaginationView.js"></script>
+    <script src="/js/views/components/AddressView.js"></script>
+
+    <!-- Views -->
+    <script src="/js/views/UserListView.js"></script>
+    <script src="/js/views/UserListItemView.js"></script>
+    <script src="/js/views/UserDetailView.js"></script>
+
+    <!-- Router -->
+    <script src="/js/router.js"></script>
+</body>
+</html>

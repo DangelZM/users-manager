@@ -1,0 +1,27 @@
+{
+  "name": "users-manager",
+  "version": "1.0.0",
+  "description": "Example of user list and detail view based on Backbone.js",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/DangelZM/users-manager.git"
+  },
+  "keywords": [
+    "backbone.js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/DangelZM/users-manager#readme"
+}
