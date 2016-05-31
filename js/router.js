@@ -4,7 +4,8 @@ App.Router = Backbone.Router.extend({
     },
     routes: {
         '': 'homePage',
-        'user/:id': 'userDetailPage'
+        'user/:id': 'userDetailPage',
+        '*action': 'pageNotFound'
     },
 
     homePage: function () {
@@ -32,5 +33,9 @@ App.Router = Backbone.Router.extend({
             }.bind(this)
         });
 
+    },
+
+    pageNotFound: function () {
+        this.mainView.html('<div class="alert alert-warning" role="alert">Sorry, the page you requested was not found!</div>');
     }
 });

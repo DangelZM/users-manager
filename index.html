@@ -9,13 +9,17 @@
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <style>
+        body {
+            padding-top: 30px;
+        }
+    </style>
 </head>
 <body>
     <div id="main-view" class="container"></div>
 
     <script type="text/template" id="list-tpl">
         <div class="list-holder">
-            <h1></h1>
             <div class="list-group"></div>
         </div>
     </script>
@@ -29,7 +33,7 @@
      </script>
     <script type="text/template" id="userDetail-tpl">
         <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
+            <li><a href="">Home</a></li>
             <li class="active">{{name}}</li>
         </ol>
         <div class="page-header">
