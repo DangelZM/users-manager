@@ -1,5 +1,5 @@
 window.App = {
-    API_URL: 'http://jsonplaceholder.typicode.com',
+    API_URL: 'http://138.201.91.180:3000',
     Defaults: {
         itemsPerPage: 5
     },
