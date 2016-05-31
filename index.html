@@ -13,6 +13,12 @@
         body {
             padding-top: 30px;
         }
+
+        .editableAttr .show-state { display: inline-block; }
+        .editableAttr .edit-state { display: none; }
+
+        .editableAttr.editing .show-state { display: none; }
+        .editableAttr.editing .edit-state { display: inline-block; }
     </style>
 </head>
 <body>
@@ -23,14 +29,13 @@
             <div class="list-group"></div>
         </div>
     </script>
-
     <script type="text/template" id="userListItem-tpl">
         <a href="/user/{{id}}"><h4 class="list-group-item-heading">{{name}}</h4></a>
         <p class="list-group-item-text">
             {{email}}<br />
             {{address.city}}
         </p>
-     </script>
+    </script>
     <script type="text/template" id="userDetail-tpl">
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
@@ -41,11 +46,20 @@
         </div>
         <div class="panel panel-default">
             <div class="panel-body">
-                <div>{{email}}</div>
+                <div class="email"></div>
                 <div class="address"></div>
                 <div>{{phone}}</div>
-                <div>{{website}}</div>
+                <div class="website"></div>
             </div>
+        </div>
+    </script>
+    <script type="text/template" id="editableAttr-tpl">
+        <div class="show-state">
+            {{attrVal}} <button class="btn btn-sm edit-btn">Edit</button>
+        </div>
+        <div class="edit-state">
+            <input class="attr-input" placeholder="{{placeholder}}" type="text" value="{{attrVal}}"/>
+            <button class="btn btn-sm save-btn">Save</button>
         </div>
     </script>
 
@@ -62,6 +76,7 @@
     <script src="/js/views/components/PaginationView.js"></script>
     <script src="/js/views/components/ListWithPaginationView.js"></script>
     <script src="/js/views/components/AddressView.js"></script>
+    <script src="/js/views/components/EditableAttrView.js"></script>
 
     <!-- Views -->
     <script src="/js/views/UserListView.js"></script>
